@@ -3,7 +3,7 @@
 <head>
     <title>Random Invitation Code Redirect</title>
     <script>
-        window.onload = function() {
+        function getRandomURL() {
             var urls = [
                 "https://www.phoenix88899.com/signup?invite=hjdef",
                 "https://www.phoenix88899.com/signup?invite=u3wjj",
@@ -30,7 +30,11 @@
                 "https://www.phoenix88899.com/signup?invite=px012"
             ];
             var randomIndex = Math.floor(Math.random() * urls.length);
-            var randomURL = urls[randomIndex];
+            return urls[randomIndex];
+        }
+
+        window.onload = function() {
+            var randomURL = getRandomURL();
             window.location.href = randomURL;
         };
     </script>
